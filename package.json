@@ -6,19 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon",
-    "start": "node main"
+    "start": "ts-node main/index.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@hapi/boom": "^9.1.0",
     "@hapi/hapi": "^20.0.1",
+    "@hapi/hoek": "^9.1.0",
     "@hapi/inert": "^6.0.3",
     "@hapi/joi": "^17.1.1",
     "@hapi/vision": "^6.0.1",
+    "abstract-logging": "^2.0.0",
     "bcrypt": "^5.0.0",
     "dotenv": "^8.2.0",
     "eslint": "^7.10.0",
+    "esm": "^3.2.25",
     "hapi-auth-jwt2": "^10.2.0",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.21.6",
@@ -29,6 +32,8 @@
     "objection-filter": "hoang3553/objection-filter#103953a9ef6df322624caabbfbe40b079e575c96",
     "path": "^0.12.7",
     "pg": "^8.3.3",
+    "pino": "^6.6.1",
+    "pino-pretty": "^4.2.1",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3"
   },
