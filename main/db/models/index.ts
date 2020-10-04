@@ -1,5 +1,6 @@
 import knex from '../connection';
-
-export default {
-  knex
+import User from './User';
+export {
+  knex,
+  User
 }
