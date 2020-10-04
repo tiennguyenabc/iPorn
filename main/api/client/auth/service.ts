@@ -9,7 +9,6 @@ import * as _ from 'lodash';
 
 class AuthService {
   async login(payload) {
-    console.log(payload);
     const user: Models.User = await Models.User.query().findOne({
       email: payload.email
     });

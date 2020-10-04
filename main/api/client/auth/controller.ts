@@ -6,9 +6,9 @@ class AuthController {
     this.service = new AuthService();
   }
 
-  async login(request) {
+  login(request) {
     const { payload } = request;
-    return await this.service.login(payload);
+    return this.service.login(payload);
   }
 }
 
