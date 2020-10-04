@@ -3,6 +3,7 @@ import * as Inert from '@hapi/inert';
 import * as Vision from '@hapi/vision';
 import * as hapiAuthJWT2 from 'hapi-auth-jwt2';
 
+import routes from './api/routes';
 const validateUser = (decoded, request) => {
   console.log(decoded);
   // This is a simple check that the `sub` claim
@@ -56,6 +57,7 @@ export const server = async (opts): Promise<Hapi.Server> => {
   })
 
   server.auth.default('jwt');
+  server.route(routes);
   if (opts.start) {
     await server.start();
   }

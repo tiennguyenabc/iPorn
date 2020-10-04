@@ -1,17 +1,18 @@
 import BaseModel from './BaseModel';
 
 interface User {
-  fullName: String,
-  email: String,
-  phoneNumber: String | Number,
-  address: String,
-  avatar: String,
-  systemRole: String,
-  facebookId: String,
-  googleId: String,
-  appleId: String,
-  createdAt: Date | String,
-  updatedAt: Date | String
+  fullName: string,
+  email: string,
+  password: string,
+  phoneNumber: string | number,
+  address: string,
+  avatar: string,
+  systemRole: string,
+  facebookId: string,
+  googleId: string,
+  appleId: string,
+  createdAt: Date | string,
+  updatedAt: Date | string
 }
 
 class User extends BaseModel {
