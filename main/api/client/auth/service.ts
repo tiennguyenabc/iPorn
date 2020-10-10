@@ -1,9 +1,9 @@
-import * as Models from '../../../db/models';
-import * as PasswordUtils from '../../../utils/password';
-import type from '../../../type';
-import jwt from '../../../services/jwt';
+import 'module-alias/register';
+import * as Models from '@/db/models/index';
+import * as PasswordUtils from '@/utils/password';
+import type from '@/type';
+import jwt from '@/services/jwt';
 
-import { sign } from 'jsonwebtoken';
 import * as Boom from '@hapi/boom';
 import * as _ from 'lodash';
 

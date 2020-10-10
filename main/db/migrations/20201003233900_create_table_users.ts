@@ -10,7 +10,7 @@ export async function up(knex: Knex): Promise<void> {
     table.string('phoneNumber');
     table.string('address');
     table.string('avatar');
-    table.string('systemRole').defaultTo('client');
+    table.string('systemRole').defaultTo('customer');
     table.string('facebookId');
     table.string('googleId');
     table.string('appleId');

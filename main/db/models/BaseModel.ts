@@ -3,6 +3,10 @@ import { buildFilter } from 'objection-filter';
 import { Model, knex } from './config';
 
 class BaseModel extends Model {
+  id: string;
+  createdAt: Date | string;
+  updatedAt: Date | string;
+
   static get QueryBuilder() {
     return QueryBuilder;
   }

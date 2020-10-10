@@ -6,8 +6,23 @@
     "sourceMap": true,
     "module": "commonjs",
     "moduleResolution": "node",
+    "paths": {
+      "@/type": [
+        "type.ts"
+      ],
+      "@/db/models/*": [
+        "db/models/*"
+      ],
+      "@/services/*": [
+        "services/*"
+      ],
+      "@/utils/*": [
+        "utils/*"
+      ]
+    },
+    "baseUrl": "main"
   },
   "exclude": [
     "node_modules"
-  ],
+  ]
 }

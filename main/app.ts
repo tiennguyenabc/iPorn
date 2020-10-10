@@ -4,7 +4,7 @@ import * as Vision from '@hapi/vision';
 import * as hapiAuthJWT2 from 'hapi-auth-jwt2';
 
 import routes from './api/routes';
-import * as logger from './plugins/logger';
+import logger from './plugins/logger';
 const validateUser = (decoded, request) => {
   console.log(decoded);
   // This is a simple check that the `sub` claim

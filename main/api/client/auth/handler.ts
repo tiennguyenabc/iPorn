@@ -1,4 +1,4 @@
-import type from '../../../type';
+import type from '@/type'
 import AuthController from './controller';
 import * as validator from './validator';
 

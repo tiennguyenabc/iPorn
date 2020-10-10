@@ -206,7 +206,7 @@ async function register(server, options): Promise<void> {
   }
 }
 
-module.exports = {
+export default {
   register,
   name: 'hapi-pino'
 };
