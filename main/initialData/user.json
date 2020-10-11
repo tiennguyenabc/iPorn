@@ -1,0 +1,18 @@
+[
+  {
+    "fullName": "Tien Nguyen",
+    "email": "admin@enouvo.com",
+    "password": "enouvo123",
+    "phoneNumber": "0911816171",
+    "address": "Da Nang",
+    "systemRole": "admin"
+  },
+  {
+    "fullName": "Tien Nguyen",
+    "email": "tien.nguyen@team.enouvo.com",
+    "password": "enouvo123",
+    "phoneNumber": "0911816171",
+    "address": "Da Nang",
+    "systemRole": "customer"
+  }
+]

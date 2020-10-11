@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Apple iPhone 6",
+    "description": "99%, bảo hành: 12 tháng, 1 ĐỔI 1 trong 30 ngày cho lỗi phần mềm",
+    "color": "đen",
+    "price": "4000000"
+  },
+  {
+    "name": "Apple iPhone 6",
+    "description": "99%, bảo hành: 12 tháng, 1 ĐỔI 1 trong 30 ngày cho lỗi phần mềm",
+    "color": "bạc",
+    "price": "3950000"
+  },
+  {
+    "name": "Apple iPhone 7",
+    "description": "99%, bảo hành: 18 tháng, 1 ĐỔI 1 trong 24 ngày cho lỗi phần mềm",
+    "color": "đen",
+    "price": "5500000"
+  }
+]

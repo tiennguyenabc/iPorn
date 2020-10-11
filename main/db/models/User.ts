@@ -1,7 +1,6 @@
 import BaseModel from './BaseModel';
 
 class User extends BaseModel {
-  id: string;
   fullName: string;
   email: string;
   password: string;
@@ -12,8 +11,6 @@ class User extends BaseModel {
   facebookId: string;
   googleId: string;
   appleId: string;
-  createdAt: Date | string;
-  updatedAt: Date | string;
 
   static get tableName() {
     return 'users';

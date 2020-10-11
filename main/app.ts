@@ -22,7 +22,6 @@ const validateUser = (decoded, request) => {
 };
 
 export const server = async (opts): Promise<Hapi.Server> => {
-  console.log('abc');
   const server: Hapi.Server = new Hapi.Server({
     host: 'localhost',
     port: 3000,

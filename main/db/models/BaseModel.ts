@@ -1,4 +1,4 @@
-import { QueryBuilder } from 'objection';
+import { QueryBuilder, QueryBuilderType } from 'objection';
 import { buildFilter } from 'objection-filter';
 import { Model, knex } from './config';
 
@@ -7,12 +7,12 @@ class BaseModel extends Model {
   createdAt: Date | string;
   updatedAt: Date | string;
 
-  static get QueryBuilder() {
-    return QueryBuilder;
+  query(): QueryBuilderType<Model> {
+    return this.query();
   }
 
-  static queryBuilder(query, baseModel, hasJoin) {
-    const builder = buildFilter(this).build(query, baseModel);
+  queryBuilder(query): Promise<BaseModel> {
+    const builder = buildFilter(this).build(query);
     return builder;
   }
 }

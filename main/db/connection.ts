@@ -1,6 +1,6 @@
 import * as dotenv from 'dotenv';
 import knexfile from '../../knexfile';
-import * as knex from 'knex';
+import knex from 'knex';
 
 interface config {
   client: string

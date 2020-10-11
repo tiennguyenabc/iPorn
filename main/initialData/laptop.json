@@ -1,0 +1,32 @@
+[
+  {
+    "name": "MacBook Air 2017 128GB (MQD32SA/A)",
+    "description": "RAM 8GB. Ổ cứng SSD 128GB",
+    "color": "bạc",
+    "price": "19990000"
+  },
+  {
+    "name": "MacBook Air 2020 i5 256GB (Z0YL)",
+    "description": "RAM 8GB. Ổ cứng SSD 256GB",
+    "color": "hường",
+    "price": "31990000"
+  },
+  {
+    "name": "MacBook Air 2020 i3 256GB (MWTL2SA/A)",
+    "description": "RAM 8GB. Ổ cứng SSD 256GB",
+    "color": "hường",
+    "price": "28990000"
+  },
+  {
+    "name": "Apple Macbook Air 2020 i5 256GB (Z0YJ)",
+    "description": "RAM 8GB. Ổ cứng SSD 256GB",
+    "color": "bạc",
+    "price": "31990000"
+  },
+  {
+    "name": "MacBook Pro Touch 16 inch 2019 (MVVJ2SA/A)",
+    "description": "RAM 16GB. Ổ cứng SSD 512GB",
+    "color": "bạc",
+    "price": "58990000"
+  }
+]
