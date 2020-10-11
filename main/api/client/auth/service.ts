@@ -1,9 +1,9 @@
-import * as Models from '../../../db/models';
-import * as PasswordUtils from '../../../utils/password';
-import ts from '../../../type';
-import jwt from '../../../services/jwt';
+import 'module-alias/register';
+import * as Models from '@/db/models/index';
+import * as PasswordUtils from '@/utils/password';
+import type from '@/type';
+import jwt from '@/services/jwt';
 
-import { sign } from 'jsonwebtoken';
 import * as Boom from '@hapi/boom';
 import * as _ from 'lodash';
 
@@ -23,12 +23,12 @@ class AuthService {
       throw Boom.badRequest('EMAIL_PASSWORD_INVALID');
     }
 
-    const tokenData: ts.tokenData = _.pick(user, [
+    const tokenData: type.tokenData = _.pick(user, [
       'id',
       'email',
       'fullName'
     ]);
-    // tokenData.scope = user.systemRole;
+    tokenData.scope = user.systemRole;
     delete user.password;
 
     const accessToken: string = jwt.issueAccessToken(tokenData);
@@ -40,6 +40,35 @@ class AuthService {
       data: user,
       success: true,
       message: 'LOGIN_SUCCESS'
+    }
+  }
+
+  async register(payload) {
+    const user: Models.User = await Models.User.query().findOne({ email: payload.email });
+    if (user) {
+      throw Boom.badRequest('EMAIL_IN_USED');
+    }
+
+    const hashPassword = await PasswordUtils.hash(payload.password);
+    payload.password = hashPassword;
+
+    const data: Models.User = await Models.User.query().insert(payload);
+    console.log(data);
+    const tokenData: type.tokenData = _.pick(data, [
+      'id',
+      'email',
+      'fullName'
+    ]);
+    tokenData.scope = data.systemRole;
+    const accessToken: string = jwt.issueAccessToken(tokenData);
+    const refreshToken: string = jwt.issueRefreshToken(tokenData)
+    delete data.password;
+    return {
+      accessToken,
+      refreshToken,
+      data,
+      success: true,
+      message: 'REGISTER_SUCCESS'
     }
   }
 }

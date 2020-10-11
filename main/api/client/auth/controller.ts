@@ -1,3 +1,4 @@
+import { register } from './handler';
 import AuthService from './service';
 
 class AuthController {
@@ -9,6 +10,9 @@ class AuthController {
   login(request) {
     const { payload } = request;
     return this.service.login(payload);
+  }
+  register(request) {
+    return this.service.register(request.payload);
   }
 }
 

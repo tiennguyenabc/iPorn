@@ -3,6 +3,7 @@ import * as _ from 'lodash';
 import ts from '../type';
 import config from '../config';
 
+console.log(config);
 class Jwt {
   issueAccessToken(payload: ts.tokenData): string {
     return jsonwebtoken.sign(

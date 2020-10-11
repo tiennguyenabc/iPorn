@@ -1,0 +1,26 @@
+[
+  {
+    "name": "iPad Mini 7.9 inch Wifi Cellular (2019)",
+    "description": "Màn hình: 7.9 inch, LED-backlit IPS LCD. Chip: Apple A12 Bionic 6 nhân, iPadOS 13. RAM: 3 GB, Bộ nhớ trong: 64 GB. Camera sau: 8 MP, Camera trước: 7 MP.  Hỗ trợ 4G. Pin: 19.1 Wh (Khoảng 5124 mAh)",
+    "color": "hồng sen",
+    "price": "13390000"
+  },
+  {
+    "name": "iPad Mini 7.9 inch Wifi 64GB (2019)",
+    "description": "Màn hình: 7.9 inch, LED-backlit IPS LCD. Chip: Apple A12 Bionic 6 nhân, iPadOS 13. RAM: 3 GB, Bộ nhớ trong: 64 GB. Camera sau: 8 MP, Camera trước: 7 MP. Pin: 19.1 Wh (Khoảng 5124 mAh)",
+    "color": "hồng sen",
+    "price": "9990000"
+  },
+  {
+    "name": "iPad Pro 12.9 inch Wifi Cellular 128GB (2020)",
+    "description": "Màn hình: 12.9 inch, Liquid Retina. Chip: Apple A12Z Bionic, iPadOS 13. RAM: 6 GB, Bộ nhớ trong: 128 GB. Camera sau: Chính 12 MP & Phụ 10 MP, TOF 3D LiDAR, Camera trước: 7 MP. Hỗ trợ 4G. Pin: 36.71 Wh (Khoảng 9720 mAh), có sạc nhanh",
+    "color": "đen",
+    "price": "31490000"
+  },
+  {
+    "name": "iPad Pro 12.9 inch Wifi 128GB (2020)",
+    "description": "Màn hình: 12.9 inch, Liquid Retina. Chip: Apple A12Z Bionic, iPadOS 13. RAM: 6 GB, Bộ nhớ trong: 128 GB. Camera sau: Chính 12 MP & Phụ 10 MP, TOF 3D LiDAR, Camera trước: 7 MP. Pin: 36.71 Wh (Khoảng 9720 mAh), có sạc nhanh",
+    "color": "trắng",
+    "price": "27490000"
+  }
+]

@@ -4,6 +4,7 @@ import * as Vision from '@hapi/vision';
 import * as hapiAuthJWT2 from 'hapi-auth-jwt2';
 
 import routes from './api/routes';
+import logger from './plugins/logger';
 const validateUser = (decoded, request) => {
   console.log(decoded);
   // This is a simple check that the `sub` claim
@@ -28,8 +29,21 @@ export const server = async (opts): Promise<Hapi.Server> => {
       cors: {
         headers: ['Authorization', 'Content-Type'],
         credentials: true
-      }
-    }
+      },
+      validate: {
+        failAction: async (request, h, err) => {
+          console.log('hehihi');
+          if (process.env.NODE_ENV === 'production') {
+            // In prod, log a limited error message and throw the default Bad Request error.
+            throw err;
+          } else {
+            // During development, log and respond with the full error.
+            console.error(err);
+            throw err;
+          }
+        },
+      },
+    },
   });
 
   server.route({
@@ -46,7 +60,15 @@ export const server = async (opts): Promise<Hapi.Server> => {
   const plugins: Array<Hapi.Plugin<any>> = [
     Inert,
     Vision,
-    hapiAuthJWT2
+    hapiAuthJWT2,
+    {
+      plugin: logger,
+      options: {
+        prettyPrint: process.env.NODE_ENV !== 'production',
+        redact: ['req.headers.authorization'],
+        once: true,
+      },
+    }
   ]
   await server.register(plugins, {
     once: true
